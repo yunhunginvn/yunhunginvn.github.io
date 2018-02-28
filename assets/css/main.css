@@ -1,0 +1,94 @@
+/* main */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f8f9fa;
+}
+.wrapper {
+  margin: 1vh 1vw;
+}
+
+/* common */
+* { margin: 0; padding: 0; }
+ul { list-style-type: none; }
+.ul-btn:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.ul-btn li {
+  border: solid 1px black;
+  padding: 0.5em;
+  margin-bottom: .8em;
+  border-radius: .5em;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.hide { display: none; }
+
+/* page */
+.page.active { display: block; }
+.page { display: none; }
+
+/* home page */
+.home { text-align: center; }
+.home .title { font-size: 3em; margin: 1em 0 .5em; }
+.home .logo { height: 30vh; }
+.home .ul-btn {
+  padding: 0;
+  margin: 1em auto;
+  width: 60%;
+}
+
+/* navigation */
+.page .content { background-color: #f8f9fa; }
+.nav {
+  position: fixed;
+  top: 1vh;
+  width: 100%;
+  min-height: 1em;
+  margin: -1vh -1vw;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+  text-align: center;
+}
+.nav div {
+  display: inline-block;
+  margin: .8em;
+}
+.nav-btn-left { float: left; }
+.nav-btn-right { float: right; }
+.nav-title { font-size: 1.2em; }
+.page .content { margin-top: 5em; }
+
+/* flashcard page */
+/* flashcard collection */
+.flashcard ul.collection-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.flashcard ul.collection-list li { width: 33%; padding: 1em 0; }
+.flashcard ul.collection-list li img { width: 33vw; }
+
+/* flashcard sandbox */
+.flashcard .card {
+   width: 80vw;
+   height: 49vh;
+   margin: auto;
+   padding-top: 2em;
+   text-align: center;
+ }
+.flashcard .card img { max-width: 40vh; }
+.flashcard .card .voca { font-size: 2em; }
+.flashcard .card .desc { font-size: 1em; }
+.flashcard ul.control-panel li {
+  width: 35%;
+  float: left;
+  margin-right: 1em;
+  padding: 2em 0.5em;
+  text-align: center;
+}
+.flashcard ul.control-panel li:nth-child(odd) { margin-left: calc((100vw - 70vw - 3.5em)/2); }
+.flashcard ul.control-panel li:nth-child(even) { margin-right: -1em; }
