@@ -25,6 +25,7 @@ ul { list-style-type: none; }
   border-color: #2e6da4;
 }
 .hide { display: none; }
+.center-in-screen { text-align: center; padding-top: 30vh; }
 
 /* page */
 .page.active { display: block; }
@@ -55,10 +56,11 @@ ul { list-style-type: none; }
 .nav div {
   display: inline-block;
   margin: .8em;
+  font-size: 1.5em;
 }
 .nav-btn-left { float: left; }
 .nav-btn-right { float: right; }
-.nav-title { font-size: 1.2em; }
+.nav-title { font-size: 1.2em; max-width: 50vw; }
 .page .content { margin-top: 5em; }
 
 /* flashcard page */
@@ -83,12 +85,28 @@ ul { list-style-type: none; }
 .flashcard .card img { max-width: 40vh; }
 .flashcard .card .voca { font-size: 2em; }
 .flashcard .card .desc { font-size: 1em; }
-.flashcard ul.control-panel li {
+.flashcard .control-panel { width: 100%; }
+.flashcard ul.control-panel-1,
+.flashcard ul.control-panel-2 { display: table; width: 95%; margin: 0 auto; }
+.flashcard ul.control-panel-1 li,
+.flashcard ul.control-panel-2 li {
   width: 35%;
   float: left;
   margin-right: 1em;
   padding: 2em 0.5em;
   text-align: center;
 }
-.flashcard ul.control-panel li:nth-child(odd) { margin-left: calc((100vw - 70vw - 3.5em)/2); }
-.flashcard ul.control-panel li:nth-child(even) { margin-right: -1em; }
+.flashcard ul.control-panel-1 li { width: 20%; padding: .5em; }
+.flashcard ul.control-panel-2 li { width: 34.5%; min-height: 10vh; line-height: 4em; }
+.flashcard ul.control-panel-1 li:nth-child(odd),
+.flashcard ul.control-panel-2 li:nth-child(odd) { margin-left: calc((100vw - 70vw - 3.5em)/2); }
+.flashcard ul.control-panel-1 li:nth-child(even),
+.flashcard ul.control-panel-2 li:nth-child(even) { margin-right: -1em; }
+
+/* my board */
+.myboard ul.collection-list { margin: 1em; }
+.myboard ul.collection-list li.lv-1 { margin-top: .5em; font-size: 1.2em; }
+.myboard ul.collection-list li.lv-2 { padding-left: 1em; font-size: 1em; color: #808080; }
+.myboard ul.collection-list li .value { float: right; }
+.myboard ul.collection-list li:after {
+}
