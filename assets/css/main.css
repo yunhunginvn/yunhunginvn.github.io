@@ -73,6 +73,7 @@ ul { list-style-type: none; }
 }
 .flashcard ul.collection-list li { width: 33%; padding: 1em 0; }
 .flashcard ul.collection-list li img { width: 33vw; }
+.flashcard ul.collection-list li p.sub-label { font-size: .8em; color: #808080; }
 
 /* flashcard sandbox */
 .flashcard .card {
