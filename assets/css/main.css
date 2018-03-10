@@ -9,6 +9,8 @@ body {
 
 /* common */
 * { margin: 0; padding: 0; }
+
+  /* ul-btn */
 ul { list-style-type: none; }
 .ul-btn:after {
   content: "";
@@ -24,6 +26,14 @@ ul { list-style-type: none; }
   background-color: #337ab7;
   border-color: #2e6da4;
 }
+
+  /* collection */
+ul.collection-list { margin: 1em; }
+ul.collection-list li.lv-1 { margin-top: .5em; font-size: 1.2em; }
+ul.collection-list li.lv-2 { padding-left: 1em; font-size: 1em; color: #808080; }
+ul.collection-list li .value { float: right; }
+
+  /* visibility */
 .hide { display: none; }
 .center-in-screen { text-align: center; padding-top: 30vh; }
 
@@ -60,7 +70,7 @@ ul { list-style-type: none; }
 }
 .nav-btn-left { float: left; }
 .nav-btn-right { float: right; }
-.nav-title { font-size: 1.2em; max-width: 50vw; }
+.nav-title { font-size: 1.2em; max-width: 50vw; max-height: 1em; }
 .page .content { margin-top: 5em; }
 
 /* flashcard page */
@@ -76,6 +86,7 @@ ul { list-style-type: none; }
 .flashcard ul.collection-list li p.sub-label { font-size: .8em; color: #808080; }
 
 /* flashcard sandbox */
+  /* section 1 */
 .flashcard .card {
    width: 80vw;
    height: 49vh;
@@ -88,26 +99,35 @@ ul { list-style-type: none; }
 .flashcard .card .desc { font-size: 1em; }
 .flashcard .control-panel { width: 100%; }
 .flashcard ul.control-panel-1,
-.flashcard ul.control-panel-2 { display: table; width: 95%; margin: 0 auto; }
+.flashcard ul.control-panel-2,
+.flashcard ul.control-panel-3 { display: table; width: 95%; margin: 0 auto; }
 .flashcard ul.control-panel-1 li,
-.flashcard ul.control-panel-2 li {
+.flashcard ul.control-panel-2 li,
+.flashcard ul.control-panel-3 li {
   width: 35%;
   float: left;
   margin-right: 1em;
   padding: 2em 0.5em;
   text-align: center;
 }
+.flashcard ul.control-panel-3 li { width: 85%; }
+
 .flashcard ul.control-panel-1 li { width: 20%; padding: .5em; }
 .flashcard ul.control-panel-2 li { width: 34.5%; min-height: 10vh; line-height: 4em; }
 .flashcard ul.control-panel-1 li:nth-child(odd),
 .flashcard ul.control-panel-2 li:nth-child(odd) { margin-left: calc((100vw - 70vw - 3.5em)/2); }
 .flashcard ul.control-panel-1 li:nth-child(even),
 .flashcard ul.control-panel-2 li:nth-child(even) { margin-right: -1em; }
+.flashcard ul.control-panel-3 li { margin-left: calc((100vw - 80vw - 2.5em)/2); }
+
+  /* section 2 */
+.flashcard .section-2 ul.pair-list { margin: .5em; min-height: calc(70vh - 1.5em); }
+.flashcard .section-2 ul.pair-list {
+  max-height: calc(70vh - 1.5em);
+  margin-bottom: 1.5em;
+  overflow-y: scroll;
+}
+.flashcard .section-2 ul.pair-list li { border-bottom: 1px solid #e0e0e0; margin-bottom: .4em; }
+.flashcard .section-2 ul.pair-list li .label { display: inline-block; width: 50vw; }
 
 /* my board */
-.myboard ul.collection-list { margin: 1em; }
-.myboard ul.collection-list li.lv-1 { margin-top: .5em; font-size: 1.2em; }
-.myboard ul.collection-list li.lv-2 { padding-left: 1em; font-size: 1em; color: #808080; }
-.myboard ul.collection-list li .value { float: right; }
-.myboard ul.collection-list li:after {
-}
