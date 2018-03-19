@@ -29,7 +29,8 @@ ul { list-style-type: none; }
 
   /* collection */
 ul.collection-list { margin: 1em; }
-ul.collection-list li.lv-1 { margin-top: .5em; font-size: 1.2em; }
+ul.collection-list li.lv-1 { margin-top: .8em; font-size: 1.2em; border-bottom: solid 1px #2e6da4; }
+/* ul.collection-list li.lv-1:nth-child(1) { border-top: 0; } */
 ul.collection-list li.lv-2 { padding-left: 1em; font-size: 1em; color: #808080; }
 ul.collection-list li .value { float: right; }
 
@@ -82,21 +83,31 @@ ul.collection-list li .value { float: right; }
   text-align: center;
 }
 .flashcard ul.collection-list li { width: 33%; padding: 1em 0; }
-.flashcard ul.collection-list li img { width: 33vw; }
+.flashcard ul.collection-list li img { width: auto; height: 25vw; }
 .flashcard ul.collection-list li p.sub-label { font-size: .8em; color: #808080; }
 
 /* flashcard sandbox */
   /* section 1 */
-.flashcard .card {
+.flashcard .section-1 .card {
    width: 80vw;
    height: 49vh;
    margin: auto;
    padding-top: 2em;
    text-align: center;
  }
-.flashcard .card img { max-width: 40vh; }
-.flashcard .card .voca { font-size: 2em; }
-.flashcard .card .desc { font-size: 1em; }
+.flashcard .section-1 .card .part1 { margin: 6em auto; }
+.flashcard .section-1 .card .voca { font-size: 3.5em; color: #980100; }
+.flashcard .section-1 .card .familiar-level {
+  position: absolute;
+  right: 2em;
+  top: 6em;
+}
+
+.flashcard .section-1 .card .desc { font-size: 3em; margin: 1em auto; }
+.flashcard .section-1 .card .desc,
+.flashcard .section-1 .card .exp-trans { color: #808080; }
+.flashcard .section-1 .card .font-small { font-size: 2.5em; }
+
 .flashcard .control-panel { width: 100%; }
 .flashcard ul.control-panel-1,
 .flashcard ul.control-panel-2,
@@ -112,7 +123,7 @@ ul.collection-list li .value { float: right; }
 }
 .flashcard ul.control-panel-3 li { width: 85%; }
 
-.flashcard ul.control-panel-1 li { width: 20%; padding: .5em; }
+.flashcard ul.control-panel-1 li { width: 12.5%; padding: .5em; }
 .flashcard ul.control-panel-2 li { width: 34.5%; min-height: 10vh; line-height: 4em; }
 .flashcard ul.control-panel-1 li:nth-child(odd),
 .flashcard ul.control-panel-2 li:nth-child(odd) { margin-left: calc((100vw - 70vw - 3.5em)/2); }
@@ -129,5 +140,24 @@ ul.collection-list li .value { float: right; }
 }
 .flashcard .section-2 ul.pair-list li { border-bottom: 1px solid #e0e0e0; margin-bottom: .4em; }
 .flashcard .section-2 ul.pair-list li .label { display: inline-block; width: 50vw; }
+.flashcard .unfamilir-symbol:after {
+  content: '😓';
+  display: block;
+  clear: both;
+  float: right;
+  margin-top: -.3em;
+}
 
 /* my board */
+.myboard button {
+  border: solid 1px black;
+  padding: 0.5em;
+  margin-bottom: .8em;
+  border-radius: .5em;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  font-size: 1em;
+  margin: 1em;
+  width: 80vw;
+}
