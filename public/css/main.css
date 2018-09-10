@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  background-color: #4C88DE;
+  height: calc(100vh - (100vh - 600px) / 2);
+  padding-top: calc((100vh - 600px) / 2);
+  font-size: 1.5em;
+  overflow-x: hidden;
+}
+
+/* width: 360px;
+height: 640px; */
+
+/* The device with borders */
+.smartphone {
+  position: relative;
+  width: 270px;
+  height: 480px;
+  margin: auto;
+  border: 16px #295078 solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+}
+
+/* The horizontal line on the top of the device */
+.smartphone:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #3e78b2;
+  border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.smartphone:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #3e78b2;
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.smartphone .content {
+  width: 270px;
+  height: 480px;
+  background: #60C0F0;
+}
+
+/* common */
+.hide {display: none !important;}
+
+.content .header {height: 50px;}
+.content .body {height: 380px;}
+.content .footer {height: 50px;}
+
+/* header */
+.content .header {
+  color: #fff;
+  text-align: center;
+  line-height: 2em;
+}
+
+/* body */
+.content .body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 5px;
+}
+
+/* footer */
+.content .footer {background: #fff;}
+.content .footer input {
+  width: calc(100% - 2px - 36px);
+  height: calc(100% - 2px);
+  border: none;
+  font-size: 1em;
+}
+.content .footer input:focus{outline: none;}
+*:focus{outline: none;}
+
+/* common */
+.btn-send {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 16px 0 16px 27.7px;
+  border-color: transparent transparent transparent #60C0F0;
+  display: inline-block;
+  margin: -9px 0;
+  cursor: pointer;
+}
+
+/* dialog */
+.dialog {
+  position: relative;
+  margin: .5em 0;
+}
+.dialog .chat-portrait {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  vertical-align: text-top;
+}
+.dialog .message {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  border-radius: 5px;
+  padding: 0 .5em;
+  color: #7592B2;
+  font-size: .8em;
+  max-width: 187px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.dialog.side-right {text-align: right;}
+.dialog .message {text-align: left;}
+.dialog .message span {overflow-wrap: break-word;}
+.dialog .message ul {
+  padding-start: 1em;
+  margin-after: 0;
+  margin-before: 0;
+  -webkit-padding-start: 1em;
+  -webkit-margin-after: 0;
+  -webkit-margin-before: 0;
+}
+.dialog .loading {
+  color: #fff;
+}
+.dialog.side-right .loading {
+  margin-right: 18px;
+}
+
+.dialog .selection {
+  text-align: center;
+}
+
+.content .game {
+  position: absolute;
+  z-index: 1000;
+  width: 270px;
+  height: 480px;
+  background: #fff;
+}
+.content .game.flyin {
+  animation: flyin 1s ease-out;
+}
+.content .game.flyout {
+  animation: flyout 1s ease-out;
+}
+/* .content .game. */
+@keyframes flyin {
+  0% {
+    clip-path: inset(0 0 0 100%);
+    -webkit-clip-path: inset(0 0 0 100%);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    -webkit-clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes flyout {
+  0% {
+    clip-path: inset(0 0 0 0);
+    -webkit-clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 100%);
+    -webkit-clip-path: inset(0 0 0 100%);
+  }
+}
+
+/* scorllbar */
+/* width */
+::-webkit-scrollbar {width: 10px;}
+/* Track */
+::-webkit-scrollbar-track {background: #f1f1f1;}
+/* Handle */
+::-webkit-scrollbar-thumb {background: #888;}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {background: #555;}
+
+/* loading dots */
+.loading:after {
+  content: ' .';
+  animation: dots 1s steps(5, end) infinite;
+}
+@keyframes dots {
+  0%, 20% {
+    color: rgba(0,0,0,0);
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  40% {
+    color: white;
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  60% {
+    text-shadow:
+      .25em 0 0 white,
+      .5em 0 0 rgba(0,0,0,0);}
+  80%, 100% {
+    text-shadow:
+      .25em 0 0 white,
+      .5em 0 0 white;}
+}
+
+/* back icon */
+.icon-back{display:inline-block!important;position:absolute;width:50px;height:50px;border-radius:100%;background:rgba(0,0,0,0);box-sizing:content-box;cursor:pointer;}
+.icon-back:before{position:absolute;content:'';margin:auto;width:calc(30px/3.5);height:calc(30px/3.5);background:rgba(0,0,0,0);border:calc(30px/8) solid #666666;border-right:none;border-top:none;top:0;bottom:0;left:calc(30px/8);right:0;transform:rotate(45deg);box-sizing:content-box}
+
+/* Blue button as seen on translate.google.com*/
+button {
+    color: white;
+    background: #4C8FFB;
+    border: 1px #3079ED solid;
+    box-shadow: inset 0 1px 0 #80B0FB;
+    margin: 0 .5em;
+}
+button:hover {
+    border: 1px #2F5BB7 solid;
+    box-shadow: 0 1px 1px #EAEAEA, inset 0 1px 0 #5A94F1;
+    background: #3F83F1;
+}
+button:active {
+    box-shadow: inset 0 2px 5px #2370FE;
+}

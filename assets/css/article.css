@@ -1,0 +1,20 @@
+@media (min-width: 993px) {
+  .brand-logo {margin-left: 1em;}
+}
+.card img.author {width: 48px;}
+p.text-indent {text-indent: 2em;}
+
+
+
+/* ad */
+.ad {
+  /* background-color: #aaa; */
+  border: 1px solid #000;
+}
+.billboard {width:970px;height:250px;}
+.large-leaderboard {width:970px;height:90px;}
+.leaderboard {width:728px;height:90px;}
+.banner {width:468px;height:60px;}
+.large-mobile-banner {width:320px;height:100px;}
+.mobile-banner {width:320px;height:50px;}
+.half-banner {width:234px;height:60px;}

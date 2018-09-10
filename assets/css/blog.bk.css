@@ -1,0 +1,218 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #F4F4F4;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #555;
+}
+
+.show {display: block !important}
+
+header {
+  height: 3em;
+  background-color: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, .5);
+}
+header a {
+  color: #002c3d;
+}
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 3em;
+}
+header a {text-decoration: none;}
+.navbar-brand {
+  line-height: 3em;
+  margin-left: 2em;
+  color: #d43f55;
+}
+.navbar-brand span {color: #ffcc00;}
+.navbar-collapse {
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 992px) {
+  .navbar-toggler,
+  .navbar-collapse {display: none;}
+}
+@media (max-width: 991px) {
+  .navbar-uncollapse {display: none;}
+}
+
+ul.navbar-uncollapse {
+  float: right;
+}
+ul.navbar-uncollapse li {
+  float: left;
+  margin-right: 2em;
+}
+
+ul.navbar-collapse {
+  margin-top: 3px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+}
+ul.navbar-collapse li {
+  line-height: 2.5em;
+  text-align: center;
+}
+ul.navbar-collapse li a { display: block; }
+ul.navbar-collapse li:hover {
+  background-color: #eee;
+}
+
+.navbar-toggler {
+  float: right;
+  margin-right: 2em;
+  cursor: pointer;
+}
+
+/* hamburger */
+.bar1, .bar2, .bar3 {
+    width: 2.8em;
+    height: .4em;
+    background-color: #777;
+    margin: .45em 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-.8em, .45em);
+    transform: rotate(-45deg) translate(-.8em, .45em);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-.7em, -.45em);
+    transform: rotate(45deg) translate(-.7em, -.45em);
+}
+
+/* loading */
+.lds-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: calc(100vh / 2 - 32px);
+  left: calc(100vw / 2 - 32px);
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* wrapper */
+.wrapper {
+  width: 80%;
+  margin: auto;
+}
+@media (max-width: 520px) {
+  .wrapper {width: 90%;}
+}
+
+/* sections */
+.wrapper section {
+  display: inline-grid;
+}
+section.posts {
+  width: calc(100% - 320px - 2em);
+}
+section.sidebar {
+  width: 300px;
+  padding: 10px;
+  background-color: #956;
+}
+.ad-vetical-banner {
+  width: 300px;
+  height: 600px;
+  border: 1px solid #000;
+  margin-bottom: 1.5em;
+}
+.recommend-posts { background-color: #456;}
+@media (max-width: 991px) {
+  section.posts {width: 100%;}
+  section.sidebar {display: none;}
+}
+
+/* posts */
+.posts {margin-top: .5em; min-height: calc(100vh - 9em);}
+.post {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  box-shadow: 0px 1px 2px -2px rgba(0, 0, 0, .5);
+}
+.post p {margin: 0; padding: 0;}
+.post .info {
+  position: relative;
+  margin: 1em 0;
+}
+.post .info .portrait {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.post .info .heading {margin-left: 58px; font-size: 20px; font-weight: 500; line-height: 1.5;}
+.post .info .subtext {margin-left: 58px; font-size: 14px; font-weight: normal; color: #999;}
+.post .info .subtext .auth {color: #3a8bbb; font-weight: 500;}
+.post .info .subtext .date {color: #bbb;}
+.post a.postlink {text-decoration: none; color: #555;}
+
+/* pagination */
+.pagination {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  text-align: center;
+  align-items: center;
+}
+.pagination button {
+  font-size: 1em;
+  padding: .5em;
+  background: #F4F4F4;
+  border-radius: 7px;
+  cursor: pointer;
+  color: #555;
+}
+
+/* footer */
+footer {
+  height: 5em;
+  box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, .5);
+}
+footer p {
+  line-height: 5em;
+  text-align: center;
+}
